@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomServiceCollectionViewCell" id="gTV-IL-0wX" customClass="CustomServiceCollectionViewCell" customModule="_MonthLesson1HW" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="108" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="108" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gl1-it-jvD">
+                        <rect key="frame" x="0.0" y="0.0" width="108" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="Delivery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="62.299999999999997" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-KC-3Ln">
+                                <rect key="frame" x="51.333333333333343" y="10" width="40.666666666666657" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road.lanes.curved.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pnC-Ve-kwb">
+                                <rect key="frame" x="15.999999999999998" y="11" width="25.333333333333329" height="38.333333333333336"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mXs-KC-3Ln" secondAttribute="bottom" constant="10" id="2I0-rg-pi5"/>
+                            <constraint firstItem="pnC-Ve-kwb" firstAttribute="top" secondItem="Gl1-it-jvD" secondAttribute="top" constant="8" id="5I5-n2-dcJ"/>
+                            <constraint firstItem="pnC-Ve-kwb" firstAttribute="leading" secondItem="Gl1-it-jvD" secondAttribute="leading" constant="16" id="KWR-Ia-L6y"/>
+                            <constraint firstItem="pnC-Ve-kwb" firstAttribute="centerY" secondItem="Gl1-it-jvD" secondAttribute="centerY" id="S55-lv-gxr"/>
+                            <constraint firstAttribute="trailing" secondItem="mXs-KC-3Ln" secondAttribute="trailing" constant="16" id="Vil-kh-b7h"/>
+                            <constraint firstItem="mXs-KC-3Ln" firstAttribute="centerY" secondItem="Gl1-it-jvD" secondAttribute="centerY" id="WMi-u6-Iy3"/>
+                            <constraint firstAttribute="bottom" secondItem="pnC-Ve-kwb" secondAttribute="bottom" constant="8" id="gXY-I1-1sc"/>
+                            <constraint firstItem="mXs-KC-3Ln" firstAttribute="leading" secondItem="pnC-Ve-kwb" secondAttribute="trailing" constant="10" id="nTQ-FR-3tf"/>
+                            <constraint firstItem="mXs-KC-3Ln" firstAttribute="top" secondItem="Gl1-it-jvD" secondAttribute="top" constant="10" id="zQf-th-93a"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Gl1-it-jvD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fB0-F2-v6a"/>
+                <constraint firstAttribute="bottom" secondItem="Gl1-it-jvD" secondAttribute="bottom" id="ycl-xO-bhC"/>
+                <constraint firstAttribute="trailing" secondItem="Gl1-it-jvD" secondAttribute="trailing" id="ztD-gC-eNc"/>
+                <constraint firstItem="Gl1-it-jvD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zye-Xx-jon"/>
+            </constraints>
+            <size key="customSize" width="153" height="46"/>
+            <connections>
+                <outlet property="actionIconImageView" destination="pnC-Ve-kwb" id="tdL-oX-Gzv"/>
+                <outlet property="actionNameLabel" destination="mXs-KC-3Ln" id="mZy-tZ-POp"/>
+                <outlet property="contentView" destination="Gl1-it-jvD" id="r4c-NL-JJj"/>
+            </connections>
+            <point key="canvasLocation" x="112.97709923664122" y="18.30985915492958"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="road.lanes.curved.right" catalog="system" width="128" height="74"/>
+    </resources>
+</document>
