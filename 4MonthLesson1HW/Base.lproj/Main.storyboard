@@ -69,19 +69,31 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58 stores open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a30-wX-kuK">
-                                <rect key="frame" x="16" y="379" width="361" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a30-wX-kuK">
+                                <rect key="frame" x="16" y="379" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Agu-h6-eNZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stores Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQl-CF-WmK">
+                                <rect key="frame" x="46" y="379" width="331" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="x6l-1e-QQv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xRW-ET-B6h"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iQl-CF-WmK" firstAttribute="leading" secondItem="a30-wX-kuK" secondAttribute="trailing" constant="6" id="2SL-Ty-q7z"/>
                             <constraint firstItem="Jw7-hI-Ghm" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="16" id="59Y-19-cbv"/>
                             <constraint firstItem="OtB-jU-uG6" firstAttribute="top" secondItem="xRW-ET-B6h" secondAttribute="top" id="BGh-MH-Mmc"/>
-                            <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="a30-wX-kuK" secondAttribute="trailing" constant="16" id="EvD-Bl-gat"/>
                             <constraint firstItem="OtB-jU-uG6" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="16" id="Hmg-nM-RHx"/>
                             <constraint firstItem="Jw7-hI-Ghm" firstAttribute="top" secondItem="OtB-jU-uG6" secondAttribute="bottom" constant="20" id="Ire-sY-ixV"/>
                             <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="OtB-jU-uG6" secondAttribute="trailing" constant="16" id="JIS-A3-7CN"/>
@@ -89,6 +101,8 @@
                             <constraint firstItem="Aui-Fe-cwX" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="10" id="YiJ-B4-nve"/>
                             <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="Jw7-hI-Ghm" secondAttribute="trailing" constant="16" id="ZX4-r1-eMX"/>
                             <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="Aui-Fe-cwX" secondAttribute="trailing" constant="10" id="Ziq-1f-kyM"/>
+                            <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="iQl-CF-WmK" secondAttribute="trailing" constant="16" id="cUs-z4-DvC"/>
+                            <constraint firstItem="iQl-CF-WmK" firstAttribute="top" secondItem="Aui-Fe-cwX" secondAttribute="bottom" constant="16" id="j9E-12-UM0"/>
                             <constraint firstItem="a30-wX-kuK" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="16" id="mg5-dg-87i"/>
                             <constraint firstItem="Aui-Fe-cwX" firstAttribute="top" secondItem="Jw7-hI-Ghm" secondAttribute="bottom" constant="32" id="pC6-NE-mBq"/>
                         </constraints>
@@ -96,6 +110,7 @@
                     <navigationItem key="navigationItem" id="diX-kI-bVj"/>
                     <connections>
                         <outlet property="customSearchView" destination="Jw7-hI-Ghm" id="ada-kQ-2v8"/>
+                        <outlet property="openedStoresQuantityLabel" destination="a30-wX-kuK" id="gbf-l2-5pa"/>
                         <outlet property="productTypesCollectionView" destination="Aui-Fe-cwX" id="heZ-gb-WRo"/>
                         <outlet property="servicesCollectionView" destination="OtB-jU-uG6" id="pxb-4m-NMI"/>
                     </connections>

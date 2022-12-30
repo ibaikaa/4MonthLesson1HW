@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var customSearchView: CustomSearchView!
     
     
-    
     @IBOutlet weak var productTypesCollectionView: UICollectionView!
+    
+    
+    @IBOutlet weak var openedStoresQuantityLabel: UILabel!
     
     
     
