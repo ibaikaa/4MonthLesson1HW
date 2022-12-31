@@ -240,12 +240,15 @@ extension ViewController: UICollectionViewDataSource {
                     isServiceActive
                 )
             
+            
+            cell.layer.borderColor = nonActiveServiceCellBorderColor.cgColor
+            
             if isServiceActive {
                 cell.backgroundColor = activeServiceBackgroundColor
+                cell.layer.borderWidth = 0
             } else {
                 cell.backgroundColor = nonActiveServiceBackgroundColor
                 cell.layer.borderWidth = 1
-                cell.layer.borderColor = nonActiveServiceCellBorderColor.cgColor
             }
             
             cell.layer.cornerRadius = 18
@@ -276,17 +279,23 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
         
         if collectionView == servicesCollectionView {
             return CGSize(width: 120, height: 36)
         } else {
             return CGSize(width: 80, height: 100)
-
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
         
         if collectionView == servicesCollectionView {
             services[indexPath.row].isActive = !services[indexPath.row].isActive

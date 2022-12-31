@@ -16,7 +16,11 @@ class CustomServiceCollectionViewCell: UICollectionViewCell {
     public static let reuseId = String(describing: CustomServiceCollectionViewCell.self)
     
     
-    public func configure(serviceName: String, serviceIcon: UIImage, _ isServiceActive: Bool) {
+    public func configure(
+        serviceName: String,
+        serviceIcon: UIImage,
+        _ isServiceActive: Bool
+    ) {
         actionNameLabel.text = serviceName
         actionIconImageView.image = serviceIcon
         
