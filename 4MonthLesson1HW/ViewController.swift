@@ -161,7 +161,8 @@ class ViewController: UIViewController {
             ),
             forCellWithReuseIdentifier: ProductTypeCollectionViewCell.reuseID
         )
-        let layout = productTypesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = productTypesCollectionView
+            .collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumLineSpacing = 16
     }
     
@@ -172,7 +173,11 @@ class ViewController: UIViewController {
     }
     
     private func configureFilterStoresButton() {
-        customSearchView.getFilterStoresButton().addTarget(self, action: #selector(filterStores), for: .touchUpInside)
+        customSearchView.getFilterStoresButton().addTarget(
+            self,
+            action: #selector(filterStores),
+            for: .touchUpInside
+        )
     }
     
     
@@ -180,7 +185,10 @@ class ViewController: UIViewController {
         storesTableView.delegate = self
         storesTableView.dataSource = self
         storesTableView.register(
-            UINib(nibName: String(describing: StoreCustomTableViewCell.self), bundle: nil),
+            UINib(
+                nibName: String(describing: StoreCustomTableViewCell.self),
+                bundle: nil
+            ),
             forCellReuseIdentifier: StoreCustomTableViewCell.reuseID
         )
     }
@@ -342,7 +350,11 @@ extension ViewController: UITableViewDelegate {
         print("Store cell tapped.")
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        heightForRowAt indexPath: IndexPath
+    )
+    -> CGFloat {
         300
     }
 }
