@@ -194,7 +194,7 @@ class ViewController: UIViewController {
     }
     
     @objc func filterStores () {
-        print("Filter")
+        //Filter
     }
     
     
@@ -275,8 +275,6 @@ extension ViewController: UICollectionViewDataSource {
                     icon: productTypes[indexPath.row].productTypeImage
                 )
             
-            print("cell created")
-            
             return cell
         }
       
@@ -314,7 +312,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
             
             servicesCollectionView.reloadData()
         } else {
-            print("Product Types Cell tapped. So? ")
+            //Action after Product Type Cell tapped
         }
         
        
@@ -327,7 +325,7 @@ extension ViewController: UISearchBarDelegate {
         _ searchBar: UISearchBar,
         textDidChange searchText: String
     ) {
-        print(searchText)
+        //Action with search process
     }
 }
 
@@ -347,7 +345,7 @@ extension ViewController: UITableViewDelegate {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        print("Store cell tapped.")
+        //Action after store cell tapped
     }
     
     func tableView(
@@ -373,7 +371,6 @@ extension ViewController: UITableViewDataSource {
         cellForRowAt indexPath: IndexPath
     )
     -> UITableViewCell {
-        print("tried to create cell")
         let cell = storesTableView
             .dequeueReusableCell(
                 withIdentifier: StoreCustomTableViewCell.reuseID,
@@ -384,8 +381,6 @@ extension ViewController: UITableViewDataSource {
             .configureCellBeforeShowing(
                 store: stores[indexPath.row]
             )
-        
-        print("Cell for store succesfully created!")
         
         return cell
     }
