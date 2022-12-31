@@ -44,8 +44,10 @@ class ViewController: UIViewController {
             serviceName: "Curbside",
             serviceIcon: UIImage(systemName: "road.lanes.curved.right")!
         ),
-        
     ]
+    
+    
+    @IBOutlet weak var storesTableView: UITableView!
     
     
     private var productTypes: [ProductTypeModel] = [
@@ -72,12 +74,67 @@ class ViewController: UIViewController {
         
     ]
     
+    
+    
+    private var stores: [StoreModel] = [
+        .init(
+            storePicture: UIImage(named: "Burger")!,
+            
+            storeName: "Burger Craze",
+            
+            storeOpened: true,
+            
+            deliveryTime: (10, 15),
+            
+            averageCafeRate: 4.6659,
+            
+            reviewsQuantity: 603,
+            
+            kitchenTypeNationality: .american,
+            
+            specialCafeFood: "Burger",
+            
+            deliveryCost: nil,
+            
+            minimalReceiptCost: 10,
+            
+            currentDistanceFromUser: 1.5203
+        ),
+        
+        .init(
+            storePicture: UIImage(named: "Pizza")!,
+                
+            storeName: "Vegeterian Pizza",
+            
+            storeOpened: false,
+            
+            deliveryTime: (20, 30),
+            
+            averageCafeRate: 4.892,
+            
+            reviewsQuantity: 302,
+            
+            kitchenTypeNationality: .italian,
+            
+            specialCafeFood: "Pizza",
+            
+            deliveryCost: 15,
+            
+            minimalReceiptCost: 12.5,
+            
+            currentDistanceFromUser: 2.203
+    
+        )
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureActionsCollectionView()
         configureSearchBar()
         configureFilterStoresButton()
         configureProductTypesCollectionView()
+        configureStoresTableView()
     }
     
     
@@ -116,6 +173,16 @@ class ViewController: UIViewController {
     
     private func configureFilterStoresButton() {
         customSearchView.getFilterStoresButton().addTarget(self, action: #selector(filterStores), for: .touchUpInside)
+    }
+    
+    
+    private func configureStoresTableView() {
+        storesTableView.delegate = self
+        storesTableView.dataSource = self
+        storesTableView.register(
+            UINib(nibName: String(describing: StoreCustomTableViewCell.self), bundle: nil),
+            forCellReuseIdentifier: StoreCustomTableViewCell.reuseID
+        )
     }
     
     @objc func filterStores () {
@@ -239,14 +306,69 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 
 extension ViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(
+        _ searchBar: UISearchBar,
+        textDidChange searchText: String
+    ) {
         print(searchText)
     }
 }
 
 
 extension ViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(
+        _ textField: UITextField
+    )
+    -> Bool {
         textField.resignFirstResponder()
     }
 }
+
+
+extension ViewController: UITableViewDelegate {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        print("Store cell tapped.")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        300
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    )
+    -> Int {
+        stores.count
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    )
+    -> UITableViewCell {
+        print("tried to create cell")
+        let cell = storesTableView
+            .dequeueReusableCell(
+                withIdentifier: StoreCustomTableViewCell.reuseID,
+                for: indexPath
+            ) as! StoreCustomTableViewCell
+        
+        cell
+            .configureCellBeforeShowing(
+                store: stores[indexPath.row]
+            )
+        
+        print("Cell for store succesfully created!")
+        
+        return cell
+    }
+    
+    
+}
+

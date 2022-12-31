@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MXy-eC-hz5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vew-Ro-6kg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="UQ8-t1-nFP">
-            <objects>
-                <navigationController id="MXy-eC-hz5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eKy-jZ-1LV">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="HgA-Eb-zD0" kind="relationship" relationship="rootViewController" id="pej-sp-nIV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O2n-LG-syB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9" y="-328"/>
-        </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="8QQ-0q-dx5">
             <objects>
                 <viewController id="HgA-Eb-zD0" customClass="ViewController" customModule="_MonthLesson1HW" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OtB-jU-uG6">
-                                <rect key="frame" x="16" y="103" width="361" height="60"/>
+                                <rect key="frame" x="16" y="59" width="361" height="60"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="rFG-QE-AVP"/>
@@ -48,7 +33,7 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jw7-hI-Ghm" customClass="CustomSearchView" customModule="_MonthLesson1HW" customModuleProvider="target">
-                                <rect key="frame" x="16" y="183" width="361" height="48"/>
+                                <rect key="frame" x="16" y="139" width="361" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -56,7 +41,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aui-Fe-cwX">
-                                <rect key="frame" x="10" y="263" width="373" height="100"/>
+                                <rect key="frame" x="10" y="219" width="373" height="100"/>
                                 <color key="backgroundColor" name="nonActiveServiceBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="D6o-vw-lWg"/>
@@ -70,7 +55,7 @@
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a30-wX-kuK">
-                                <rect key="frame" x="16" y="379" width="24" height="24"/>
+                                <rect key="frame" x="16" y="335" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Agu-h6-eNZ"/>
                                 </constraints>
@@ -79,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stores Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQl-CF-WmK">
-                                <rect key="frame" x="46" y="379" width="331" height="24"/>
+                                <rect key="frame" x="46" y="335" width="331" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="x6l-1e-QQv"/>
                                 </constraints>
@@ -87,17 +72,24 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dfu-lx-EB1">
+                                <rect key="frame" x="0.0" y="377" width="393" height="392"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xRW-ET-B6h"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iQl-CF-WmK" firstAttribute="leading" secondItem="a30-wX-kuK" secondAttribute="trailing" constant="6" id="2SL-Ty-q7z"/>
                             <constraint firstItem="Jw7-hI-Ghm" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="16" id="59Y-19-cbv"/>
+                            <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="dfu-lx-EB1" secondAttribute="trailing" id="5SK-lL-tdg"/>
                             <constraint firstItem="OtB-jU-uG6" firstAttribute="top" secondItem="xRW-ET-B6h" secondAttribute="top" id="BGh-MH-Mmc"/>
                             <constraint firstItem="OtB-jU-uG6" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="16" id="Hmg-nM-RHx"/>
                             <constraint firstItem="Jw7-hI-Ghm" firstAttribute="top" secondItem="OtB-jU-uG6" secondAttribute="bottom" constant="20" id="Ire-sY-ixV"/>
                             <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="OtB-jU-uG6" secondAttribute="trailing" constant="16" id="JIS-A3-7CN"/>
                             <constraint firstItem="a30-wX-kuK" firstAttribute="top" secondItem="Aui-Fe-cwX" secondAttribute="bottom" constant="16" id="Jfu-Xi-gQP"/>
+                            <constraint firstItem="dfu-lx-EB1" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" id="X1w-Z9-NLB"/>
+                            <constraint firstItem="dfu-lx-EB1" firstAttribute="top" secondItem="a30-wX-kuK" secondAttribute="bottom" constant="18" id="XBT-6s-MIT"/>
                             <constraint firstItem="Aui-Fe-cwX" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="10" id="YiJ-B4-nve"/>
                             <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="Jw7-hI-Ghm" secondAttribute="trailing" constant="16" id="ZX4-r1-eMX"/>
                             <constraint firstItem="xRW-ET-B6h" firstAttribute="trailing" secondItem="Aui-Fe-cwX" secondAttribute="trailing" constant="10" id="Ziq-1f-kyM"/>
@@ -105,24 +97,53 @@
                             <constraint firstItem="iQl-CF-WmK" firstAttribute="top" secondItem="Aui-Fe-cwX" secondAttribute="bottom" constant="16" id="j9E-12-UM0"/>
                             <constraint firstItem="a30-wX-kuK" firstAttribute="leading" secondItem="xRW-ET-B6h" secondAttribute="leading" constant="16" id="mg5-dg-87i"/>
                             <constraint firstItem="Aui-Fe-cwX" firstAttribute="top" secondItem="Jw7-hI-Ghm" secondAttribute="bottom" constant="32" id="pC6-NE-mBq"/>
+                            <constraint firstItem="xRW-ET-B6h" firstAttribute="bottom" secondItem="dfu-lx-EB1" secondAttribute="bottom" id="phU-K1-ekz"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="1FM-xi-6AP"/>
                     <navigationItem key="navigationItem" id="diX-kI-bVj"/>
                     <connections>
                         <outlet property="customSearchView" destination="Jw7-hI-Ghm" id="ada-kQ-2v8"/>
                         <outlet property="openedStoresQuantityLabel" destination="a30-wX-kuK" id="gbf-l2-5pa"/>
                         <outlet property="productTypesCollectionView" destination="Aui-Fe-cwX" id="heZ-gb-WRo"/>
                         <outlet property="servicesCollectionView" destination="OtB-jU-uG6" id="pxb-4m-NMI"/>
+                        <outlet property="storesTableView" destination="dfu-lx-EB1" id="KOD-qb-MJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iv8-uV-thu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849.6183206106869" y="-328.16901408450707"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Puo-Fs-Uz0">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vew-Ro-6kg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dx8-fD-F7t">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HgA-Eb-zD0" kind="relationship" relationship="viewControllers" id="gFs-3d-lSA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2x-MD-gFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="922.90076335877859" y="-328.16901408450707"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
         <namedColor name="nonActiveServiceBackgroundColor">
             <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
