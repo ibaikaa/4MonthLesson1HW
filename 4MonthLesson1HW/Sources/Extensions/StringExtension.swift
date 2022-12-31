@@ -6,6 +6,7 @@
 //
 
 
+//Used in StoreCustomTableViewCell.swift for capitalizing first letter of the word.
 extension String {
     var capitalizedSentence: String {
         // 1
